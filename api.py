@@ -1,8 +1,7 @@
 from bs4 import BeautifulSoup
-from flask import request, url_for
+from flask import request, url_for, json, Response
 from flask.ext.api import FlaskAPI, status, exceptions
 import requests
-import json
 
 app = FlaskAPI(__name__)
 
@@ -24,7 +23,8 @@ def feeds_list():
             feed['video'] = item.video.string
         feeds.append(feed)
 
-    return json.dumps(feeds, ensure_ascii=False)
+    return Response(json.dumps(feeds),  mimetype='application/json')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    #app.run(debug=True)
+    app.run(host="0.0.0.0")
