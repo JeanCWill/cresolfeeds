@@ -1,0 +1,5 @@
+*.pyc
+.cresolfeeds
+.env
+.venv
+__pycache__
