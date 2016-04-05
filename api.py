@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
-from flask import request, url_for, json, Response
-from flask.ext.api import FlaskAPI, status, exceptions
+from flask import json, Response
+from flask.ext.api import FlaskAPI
 import requests
 
 app = FlaskAPI(__name__)
