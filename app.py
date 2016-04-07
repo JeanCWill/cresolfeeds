@@ -19,6 +19,7 @@ def feeds_list():
         feed['description'] = item.description.string
         feed['image'] = item.image.string
         feed['link'] = item.link.string
+        feed['pubDate'] = item.pubdate.string
         if item.video is not None:
             feed['video'] = item.video.string
         feeds.append(feed)
